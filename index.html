@@ -16,16 +16,25 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     
-    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
-    
-    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
-    
     <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 </head>
 
 <body>
-    <div id="container">
+    <div id="topbar" class="center">
+        <div class="floatL">
+            <h3>Etch-A-Sketch</h3>
+            <p>By Cale Argan</p>
+        </div>
+        <div class="floatR">
+            <p>Change the size of your grid.  Input a number from 0 to 16</p>
+            <button type="submit" id="gridbutton" class="floatR">Submit</button>
+            <input type="text" id="gridsize" class="floatR">
+        </div>
+    </div>
+    <div id="container" class="center">
         <div class="square"></div>
     </div>
     <script src="script.js"></script>

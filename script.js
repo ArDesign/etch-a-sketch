@@ -12,4 +12,12 @@ $(".square").hover(function(){
     $(this).css("background-color","#FDE3A7");
 });
     
+$("#gridbutton").click(function(){
+    var x = $("#gridsize").val();
+    console.log(x);
+    
+});
+    
+
+
 }); //doc ready
