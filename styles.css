@@ -29,8 +29,8 @@ body {
 
 
 .square {
-    width: calc(650px / 16);
-    height: calc(650px / 16);
+    /*width: calc(650px / 16);
+    height: calc(650px / 16);*/
     background-color: #E67E22;
     float: left;
     display:block;
@@ -45,4 +45,3 @@ body {
 #topbar {
     width: 650px;
 }
-
