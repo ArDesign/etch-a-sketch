@@ -12,6 +12,10 @@ body {
     padding: 0px;
 }
 
+h3 {
+    margin-top: 10px;
+}
+
 .floatL {
     float:left;
     display: block;
@@ -44,4 +48,54 @@ body {
 
 #topbar {
     width: 650px;
+    height: 70px;
+}
+
+button {
+    position:relative;
+    border-style: none;
+    height: 30px;
+    padding: 5px;
+    margin: 20px 10px 0px 0px;
+    font-size: 16px;
+}
+
+#resetgrid {
+    margin-right: 0px;
+}
+
+.colorbuttons {
+    width: 30px;
+}
+
+.colorbuttons:hover {
+    opacity: .7;
+    border: 1px solid black;
+}
+
+.typicalbutton {
+    background-color: #59abe3;
+    top: -3px;
+}
+
+.typicalbutton:hover {
+    background-color: #c5eff7;
+}
+
+#red {
+    background-color: #d91e18;
+}
+
+#blue {
+    background-color: #4183d7;
+}
+
+#green {
+    background-color: #26a65b;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

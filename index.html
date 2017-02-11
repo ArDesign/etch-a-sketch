@@ -24,13 +24,16 @@
 
 <body>
     <div id="topbar" class="center">
-        <div class="floatL">
+        <div class="floatL clearfix">
             <h3>Etch-A-Sketch</h3>
             <p>By Cale Argan</p>
         </div>
-        <div class="floatR">
-            <p>Change the size of your grid.  Input a number from 1 to 64</p>
-            <button id="resetgrid" class="floatR">Reset</button>
+        <div class="floatR clearfix">
+            <button class="colorbuttons" id="red"></button>
+            <button class="colorbuttons" id="blue"></button>
+            <button class="colorbuttons" id="green"></button>
+            <button class="typicalbutton" id="choosesize">Choose Size</button>
+            <button class="typicalbutton" id="resetgrid">Reset</button>
         </div>
     </div>
     <div id="container" class="center">
