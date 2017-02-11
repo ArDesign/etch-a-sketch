@@ -44,6 +44,7 @@ h3 {
 #container {
     height: 650px;
     width: 650px;
+    overflow: hidden;
 }
 
 #topbar {
@@ -76,6 +77,11 @@ button {
 .typicalbutton {
     background-color: #59abe3;
     top: -3px;
+}
+
+#random {
+    background-color: purple;
+    color: white;
 }
 
 .typicalbutton:hover {

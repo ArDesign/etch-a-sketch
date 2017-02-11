@@ -28,6 +28,13 @@ var hoverreset = function(y) {
         sq.mouseover(function(){
             $(this).css("background-color","#66cc99");
         });
+    } else if (y === "random") {
+    var sq = $(".square");
+    currentcolor = "random";
+    sq.css("background-color","#"+((1<<24)*Math.random()|0).toString(16));
+        sq.mouseover(function(){
+            $(this).css("background-color","#"+((1<<24)*Math.random()|0).toString(16));
+        });
     }
 };
     
@@ -50,21 +57,24 @@ var makesize = function() {
 var a = $(".square")
 
 var multiplyboxes = function() {
-        grid = x * x - 1;
+    /*$(html).not(':first').remove();*/
+    $(".square").not(':first').remove();
+        grid = (x * x) - 1;
         for (var i=0; i<grid; i++) {
         a.clone().insertAfter(a);
+            console.log(grid);
         };
       };
 
 //buttons:
 $("#choosesize").click(function() {
-    x = prompt("Choose a grid size");
+    x = prompt("Choose a grid size between 1 and 64");
     makesize();
 });
     
 $("#resetgrid").click(function(){
     x = 16;
-    multiplyboxes();
+   /* multiplyboxes();*/
     hoverreset(resetcolor);
     makesize();
 });
@@ -77,6 +87,9 @@ $("#green").click(function(){
 });
 $("#blue").click(function(){
     hoverreset("blue");
+});
+$("#random").click(function(){
+    hoverreset("random");
 });
 
 //run functions
