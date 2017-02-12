@@ -90,4 +90,3 @@ hoverreset(resetcolor);
 
 
 }); //doc ready
-
