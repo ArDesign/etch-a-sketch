@@ -8,31 +8,27 @@ var currentcolor = "blue";
 
 var hoverreset = function(y) {
     if (y === "blue") {
-    var sq = $(".square");
     currentcolor = "blue";
-    sq.css("background-color","#4183d7");
-        sq.mouseover(function(){
+    $(".square").css("background-color","#4183d7");
+        $(".square").mouseover(function(){
             $(this).css("background-color","#c5eff7")
         });
     } else if (y === "red") {
-    var sq = $(".square");
     currentcolor = "red";
-    sq.css("background-color","#d91e18");
-        sq.mouseover(function(){
+    $(".square").css("background-color","#d91e18");
+        $(".square").mouseover(function(){
             $(this).css("background-color","#f1a9a0");
         });
     } else if (y === "green") {
-    var sq = $(".square");
     currentcolor = "green";
-    sq.css("background-color","#26a65b");
-        sq.mouseover(function(){
+    $(".square").css("background-color","#26a65b");
+        $(".square").mouseover(function(){
             $(this).css("background-color","#66cc99");
         });
     } else if (y === "random") {
-    var sq = $(".square");
     currentcolor = "random";
-    sq.css("background-color","#"+((1<<24)*Math.random()|0).toString(16));
-        sq.mouseover(function(){
+    $(".square").css("background-color","#"+((1<<24)*Math.random()|0).toString(16));
+        $(".square").mouseover(function(){
             $(this).css("background-color","#"+((1<<24)*Math.random()|0).toString(16));
         });
     }
@@ -44,7 +40,6 @@ var makesize = function() {
     } else {
       var width = 650 / x;
       $(".square").css('width',width).css('height',width);
-      /*$(".square").css('height',width);*/
         
       multiplyboxes();
       hoverreset(currentcolor);
@@ -52,12 +47,9 @@ var makesize = function() {
     };
 };
 
-// random number:
-// "#"+((1<<24)*Math.random()|0).toString(16)
 var a = $(".square")
 
 var multiplyboxes = function() {
-    /*$(html).not(':first').remove();*/
     $(".square").not(':first').remove();
         grid = (x * x) - 1;
         for (var i=0; i<grid; i++) {
@@ -74,7 +66,6 @@ $("#choosesize").click(function() {
     
 $("#resetgrid").click(function(){
     x = 16;
-   /* multiplyboxes();*/
     hoverreset(resetcolor);
     makesize();
 });
